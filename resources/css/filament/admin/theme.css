@@ -1,0 +1,315 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@tailwind variants;
+@import '../../../../vendor/filament/filament/resources/css/base.css';
+
+@config 'tailwind.config.js';
+
+/* ── CyberWraith Admin Theme ── */
+
+/* Background */
+.fi-layout,
+.fi-main,
+body {
+    background-color: #050a0f !important;
+}
+
+/* Sidebar */
+.fi-sidebar {
+    background-color: #0a1520 !important;
+    border-right: 1px solid rgba(0, 255, 136, 0.1) !important;
+}
+
+.fi-sidebar-header {
+    background-color: #0a1520 !important;
+    border-bottom: 1px solid rgba(0, 255, 136, 0.08) !important;
+}
+
+.fi-logo {
+    color: #00ff88 !important;
+    font-weight: 700 !important;
+    letter-spacing: 0.15em !important;
+    text-transform: uppercase !important;
+    font-size: 0.9rem !important;
+}
+
+.fi-sidebar-item-button {
+    border-radius: 0 !important;
+    font-size: 0.7rem !important;
+    letter-spacing: 0.1em !important;
+    text-transform: uppercase !important;
+    color: rgba(255,255,255,0.4) !important;
+    transition: all 0.2s !important;
+}
+
+.fi-sidebar-item-button:hover,
+.fi-sidebar-item-button.fi-active {
+    background-color: rgba(0, 255, 136, 0.08) !important;
+    color: #00ff88 !important;
+    border-left: 2px solid #00ff88 !important;
+}
+
+/* Topbar */
+.fi-topbar {
+    background-color: rgba(5, 10, 15, 0.95) !important;
+    border-bottom: 1px solid rgba(0, 255, 136, 0.1) !important;
+    backdrop-filter: blur(20px) !important;
+}
+
+/* Page header */
+.fi-header-heading {
+    font-size: 1.25rem !important;
+    font-weight: 800 !important;
+    color: #fff !important;
+    letter-spacing: -0.01em !important;
+}
+
+/* Cards */
+.fi-section,
+.fi-wi-stats-overview-stat,
+.fi-ta-ctn {
+    background-color: #0a1520 !important;
+    border: 1px solid rgba(255,255,255,0.06) !important;
+    border-radius: 0 !important;
+    box-shadow: none !important;
+}
+
+/* Stat widgets */
+.fi-wi-stats-overview-stat-value {
+    color: #00ff88 !important;
+    font-size: 2rem !important;
+    font-weight: 900 !important;
+}
+
+.fi-wi-stats-overview-stat-label {
+    color: rgba(255,255,255,0.5) !important;
+    font-size: 0.65rem !important;
+    letter-spacing: 0.15em !important;
+    text-transform: uppercase !important;
+}
+
+.fi-wi-stats-overview-stat-description {
+    font-size: 0.65rem !important;
+    letter-spacing: 0.08em !important;
+}
+
+/* Table */
+.fi-ta-header-cell {
+    background-color: rgba(0,0,0,0.3) !important;
+    font-size: 0.6rem !important;
+    letter-spacing: 0.15em !important;
+    text-transform: uppercase !important;
+    color: rgba(255,255,255,0.3) !important;
+    border-bottom: 1px solid rgba(255,255,255,0.06) !important;
+}
+
+.fi-ta-row {
+    border-bottom: 1px solid rgba(255,255,255,0.04) !important;
+}
+
+.fi-ta-row:hover {
+    background-color: rgba(0,255,136,0.03) !important;
+}
+
+.fi-ta-cell {
+    font-size: 0.78rem !important;
+    color: rgba(255,255,255,0.6) !important;
+}
+
+/* Buttons */
+.fi-btn-primary {
+    background-color: #00ff88 !important;
+    color: #000 !important;
+    border-radius: 0 !important;
+    font-size: 0.7rem !important;
+    font-weight: 700 !important;
+    letter-spacing: 0.1em !important;
+    text-transform: uppercase !important;
+    box-shadow: none !important;
+}
+
+.fi-btn-primary:hover {
+    background-color: #00ffaa !important;
+}
+
+/* Inputs */
+.fi-input {
+    background-color: #050a0f !important;
+    border: 1px solid rgba(0,255,136,0.2) !important;
+    border-radius: 0 !important;
+    color: #00ff88 !important;
+    font-size: 0.82rem !important;
+}
+
+.fi-input:focus {
+    border-color: rgba(0,255,136,0.5) !important;
+    box-shadow: none !important;
+}
+
+/* Badges */
+.fi-badge {
+    border-radius: 0 !important;
+    font-size: 0.55rem !important;
+    letter-spacing: 0.12em !important;
+    text-transform: uppercase !important;
+    font-weight: 700 !important;
+}
+
+/* Nav group labels */
+.fi-sidebar-group-label {
+    font-size: 0.55rem !important;
+    letter-spacing: 0.25em !important;
+    text-transform: uppercase !important;
+    color: rgba(0,255,136,0.4) !important;
+    padding-left: 0.75rem !important;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar { width: 4px; height: 4px; }
+::-webkit-scrollbar-track { background: #050a0f; }
+::-webkit-scrollbar-thumb { background: rgba(0,255,136,0.2); }
+::-webkit-scrollbar-thumb:hover { background: rgba(0,255,136,0.4); }
+
+/* Remove border radius globally */
+* { border-radius: 0 !important; }
+
+/* Grid background */
+.fi-main {
+    background-image:
+        linear-gradient(rgba(0,255,136,0.02) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(0,255,136,0.02) 1px, transparent 1px) !important;
+    background-size: 50px 50px !important;
+}
+
+/* Fix topbar */
+.fi-topbar nav,
+header.fi-topbar,
+.fi-topbar,
+[class*="fi-topbar"] {
+    background-color: #0a1520 !important;
+    border-bottom: 1px solid rgba(0, 255, 136, 0.1) !important;
+}
+
+/* Fix main content area background */
+.fi-main-ctn,
+.fi-simple-main-ctn,
+main.fi-main,
+.fi-body {
+    background-color: #050a0f !important;
+}
+
+/* Fix the white/light top strip */
+.fi-layout-sidebar,
+.fi-layout {
+    background-color: #050a0f !important;
+}
+
+/* Brand name color */
+.fi-brand-name {
+    color: #00ff88 !important;
+    font-weight: 700 !important;
+    letter-spacing: 0.2em !important;
+    text-transform: uppercase !important;
+}
+
+/* Hide empty default brand slot */
+.fi-sidebar-header {
+    display: none !important;
+}
+
+/* Un-hide sidebar header so logo shows */
+.fi-sidebar-header {
+    display: flex !important;
+    background-color: #0a1520 !important;
+    border-bottom: 1px solid rgba(0,255,136,0.1) !important;
+    padding: 0 !important;
+    min-height: 60px !important;
+    align-items: center !important;
+}
+
+/* Hide the empty brand name text */
+.fi-sidebar-header .fi-logo {
+    display: none !important;
+}
+
+/* Logo area separator */
+.fi-sidebar-nav > div:first-child a[href="/"] {
+    border-bottom: 1px solid rgba(0,255,136,0.1) !important;
+    padding-bottom: 1rem !important;
+    margin-bottom: 0.5rem !important;
+    display: block !important;
+}
+
+/* Push sidebar toggle button after the logo */
+.fi-sidebar-close-button,
+.fi-icon-button[aria-label*="sidebar"],
+.fi-icon-button[title*="sidebar"] {
+    order: 2 !important;
+}
+
+/* Topbar layout fix - logo far left */
+header.fi-topbar,
+.fi-topbar {
+    background-color: #0a1520 !important;
+    border-bottom: 1px solid rgba(0,255,136,0.1) !important;
+}
+
+.fi-topbar nav {
+    display: flex !important;
+    align-items: center !important;
+    padding: 0 !important;
+    gap: 0 !important;
+}
+
+/* First child (our logo hook) goes far left with no margin */
+.fi-topbar nav > div:first-child,
+.fi-topbar nav > a:first-child {
+    margin-left: 0 !important;
+    padding-left: 0 !important;
+    flex-shrink: 0 !important;
+}
+
+/* Middle section expands */
+.fi-topbar nav > div:nth-child(2) {
+    flex: 1 !important;
+}
+
+/* Fix topbar logo to far left aligned with sidebar */
+.fi-topbar nav {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+    gap: 0 !important;
+}
+
+.fi-topbar nav > a:first-child {
+    width: 256px !important;
+    min-width: 256px !important;
+    border-right: 1px solid rgba(0,255,136,0.1) !important;
+    padding: 0 1.25rem !important;
+    margin: 0 !important;
+    height: 64px !important;
+    background: #0a1520 !important;
+}
+
+.fi-topbar nav > .ms-auto {
+    margin-left: auto !important;
+    padding-right: 1rem !important;
+    gap: 0.75rem !important;
+}
+
+/* Show sidebar header for logo */
+.fi-sidebar-header {
+    display: flex !important;
+    align-items: center !important;
+    min-height: 64px !important;
+    background: #0a1520 !important;
+    border-bottom: 1px solid rgba(255,255,255,0.05) !important;
+    padding: 0 !important;
+}
+
+/* Hide the empty brand name Filament renders */
+.fi-sidebar-header .fi-brand-name,
+.fi-sidebar-header .fi-logo {
+    display: none !important;
+}
