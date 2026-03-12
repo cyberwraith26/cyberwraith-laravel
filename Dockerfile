@@ -15,14 +15,26 @@ RUN apt-get update && apt-get install -y \
     && docker-php-ext-install pdo pdo_pgsql pgsql mbstring exif pcntl bcmath gd intl zip \
     && apt-get clean && rm -rf /var/lib/apt/lists/*
 
+# Install Node.js 20
+RUN curl -fsSL https://deb.nodesource.com/setup_20.x | bash - \
+    && apt-get install -y nodejs \
+    && apt-get clean && rm -rf /var/lib/apt/lists/*
+
 # Install Composer
 COPY --from=composer:latest /usr/bin/composer /usr/bin/composer
 
 # Set working directory
 WORKDIR /var/www/html
 
-# Copy project files
+# Copy package files first (better Docker layer caching)
+COPY package*.json ./
+RUN npm ci
+
+# Copy all project files
 COPY . .
+
+# Build Vite assets
+RUN npm run build
 
 # Install PHP dependencies
 RUN composer install --no-dev --optimize-autoloader --no-interaction --no-scripts
