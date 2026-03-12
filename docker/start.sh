@@ -1,5 +1,7 @@
 #!/bin/bash
 
+php artisan package:discover --ansi
+
 # Cache config, routes and views
 php artisan config:cache
 php artisan route:cache
